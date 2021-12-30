@@ -1,0 +1,24 @@
+#Import data wrangling libraries 
+import pandas as pd 
+import numpy as np
+import matplotlib.pyplot as plt
+
+from sklearn.model_selection import train_test_split, GridSearchCV
+
+%matplotlib inline
+import warnings 
+warnings.filterwarnings("ignore")
+
+#Import Machine Learning Algorithms
+
+#k-nearest Neighbors
+from sklearn.neighbors import KNeighborsClassifier
+
+#LogisticRegression
+from sklearn.linear_model import LogisticRegression
+
+#LinearSVC (SVC stands for support vector classifier)
+from sklearn.svm import SVC
+
+#Random Forest, Graident Booster
+from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier 
