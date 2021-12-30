@@ -1,0 +1,9 @@
+#Reading in data from files
+X = pd.read_csv("selected_sites_EPIC_143.csv", index_col = 0).T
+
+y = pd.read_csv("ptsd_status_validation103.csv")
+
+y = y['status'].values
+
+display(X.shape)
+display(y) 
