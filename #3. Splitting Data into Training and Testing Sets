@@ -1,0 +1,7 @@
+#Split Data into training and testing sets
+
+#Stratify = Aims at splitting a data set with approximately the same percentage of each class
+
+#Random_State = Helps maintain a consisten result, won't get a different result for each run
+
+X_trainval, X_test, y_trainval, y_test = train_test_split(X, y, stratify=y, random_state=10)
