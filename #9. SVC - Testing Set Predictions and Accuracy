@@ -1,0 +1,16 @@
+#SVC
+svc = SVC(C=1, gamma=1, kernel='rbf', random_state=0)
+svc.fit(X_trainval, y_trainval)
+
+#Test Predictions
+print("Test set predictions: {}".format(svc.predict(X_test)))
+
+#Extra space
+print()
+
+#Model Accuracy - Testing Set
+print("Testing set accuracy: {:.3f}".format(svc.score(X_test, y_test)))
+
+#Result
+Test set predictions: [ 0 1 0 0 1 1 1 0 1 1 0 1 0 0 0 0 1 1 1 0 1 0 0 0 1 0]
+Testing set accuracy: 0.923
