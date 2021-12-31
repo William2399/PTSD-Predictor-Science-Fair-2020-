@@ -1,0 +1,18 @@
+#Finding the best paramaters for KNeighborsClassifier
+param_grid = {'n_neighbors' : [1,2,3,4,5]}
+grid_search=GridSearchCV(KNeighborsClassifier(), param_grid, cv=5)
+grid_search.fit(X_trainval, y_trainval)
+
+#Model Best Paramaters
+print(grid_search.best_params_)
+
+#Extra space
+print()
+
+#Model Asccuracy - Training Set
+print("Training set accuracy: {:.3f}".format(grid_search.best_score_))
+
+#Printed Results
+{'n_neighbors': 3}
+
+Training set accuracy: 0.792
