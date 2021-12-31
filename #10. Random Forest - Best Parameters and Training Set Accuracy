@@ -1,0 +1,20 @@
+#Find the best parameters for RandomForestClassifier
+param_grid = RandomForestClassifier()
+param_grid = {
+  "n_estimators":[5,10,50,60,70,80,85,90,100,250],
+  "max_depth":[1,2,3,4,5,16,32,None]
+}
+
+grid_search = GridSearchCV(RandomForestClassifier(random_state=0, param_grid, cv=5)
+grid_search.fit(X_trainval, y_trainval)
+print(grid_search.best_params_)
+
+#Extra space
+print()
+
+#Model Accuracy - Training Set
+print("Training set accuracy: {:.3f}".format(grid_search.best_score_))
+
+#Results
+{'max_depth':4, 'n_estimators':80}
+Training set accuracy: 0.857
