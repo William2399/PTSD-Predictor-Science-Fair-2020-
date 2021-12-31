@@ -1,0 +1,18 @@
+#Finding the best parameters for GradientBoostingClassifier
+param_grid={'max_depth':[1,2,3,4,5],
+            'learning_rate':[0.005, 0.01, 0.015, 1]
+            }
+grid_search=GridSearchCV(GraidentBoostingClassifier(random_state=0), param_grid, cv=5)
+grid_search.fit(X_trainval, y_trainval)
+
+print(grid_search.best_params_)
+
+#Extra space
+print()
+
+#Model Accuracy - Training Set
+print("Training set accuracy: {:.3f}".format(grid_search.best_score_))
+
+#Results
+{'learning_rate': 0.01, 'max_depth':1}
+Training set accuracy: 0.740
