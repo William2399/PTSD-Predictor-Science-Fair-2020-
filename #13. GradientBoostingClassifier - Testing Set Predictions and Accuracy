@@ -1,0 +1,16 @@
+#GradientBoostingClassifier
+gbc=GradientBoostingClassifier(random_state=0, learning_rate = 0.01, max_depth = 1)
+gbc.fit(X_trainval, y_trainval)
+
+#Test Predictions
+print("Test set predictions: {}". format(gbc.predict(X_test)))
+
+#Extra space
+print()
+
+#Model Accuracy - Testing set
+print("Testing set accuracy: {:.3f}".format(gbc.score(X_test, y_test)))
+
+#Result
+Test set predictions: [0 1 1 1 1 0 0 0 0 1 1 0 0 1 0 0 1 1 0 0 0 0 0 0 1 0 ]
+Testing set accuracy: 0.615
