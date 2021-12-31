@@ -1,0 +1,16 @@
+#RandomForestClassifier
+forest = RandomForestClassifier(n_estimators=80, max_depth=4, random_state=0)
+forest.fit(X_trainval, y_trainval)
+
+#Test Predictions
+print("Test set predictions: {}".format(forest.predict(X_test)))
+
+#Extra space
+print()
+
+#Model Accuracy - Testing Set
+print("Testing set accuracy: {:.3f}".format(forest.score(X_test, y_test)))
+
+#Result
+Test set predictions: [ 0 0 0 0 1 1 1 0 1 1 0 1 0 1 0 0 1 1 1 0 1 0 0 0 1 0]
+Testing set accuracy: 0.923
