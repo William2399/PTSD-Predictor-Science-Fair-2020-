@@ -1,0 +1,17 @@
+#KNeighborsClassifier
+knc = KNeighborsClassifier(n_neighbors=3)
+knc.fit(X_trainval, y_trainval)
+
+#Test predictions
+print("Test set predictions: {}".format(knc.predict(X_test)))
+
+#Extra space
+print()
+
+#Model Accuracy - Test Set
+print("Test set accuracy: {:.3f}".format(knc.score(X_test, y_test)))
+
+#Results
+
+Test set predictions: [0 1 0 1 1 1 1 0 1 1 1 1 0 0 1 0 1 1 1 0 1 1 0 1 1 0]
+Test set accuracy: 0.808
