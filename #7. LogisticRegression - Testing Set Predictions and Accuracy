@@ -1,0 +1,16 @@
+#Logistic Regression
+logreg = LogisticRegression(C=5)
+logreg.fit(X_trainval, y_trainval)
+
+#Test predictions
+print("Test set predictions: {}".format(logreg.predict(X_test)))
+
+#Extra space
+print()
+
+#Model Accuracy - Testing Set
+print("Testing set accuracy: {:.3f}".format(logreg.score(X_test, y_test)))
+
+#Result
+Test set predictions: [0 1 0 0 1 1 1 0 1 1 0 1 0 0 0 0 1 1 1 0 1 0 0 0 1 0]
+Testing set accuracy: 0.923
